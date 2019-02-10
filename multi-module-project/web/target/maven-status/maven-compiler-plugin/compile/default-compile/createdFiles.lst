@@ -1,0 +1,10 @@
+academy/javaprogramming/service/GameService.class
+academy/javaprogramming/impl/GameServiceImpl.class
+academy/javaprogramming/util/AttributeNames.class
+academy/javaprogramming/util/ViewNames.class
+academy/javaprogramming/interceptor/RequestInterceptor.class
+academy/javaprogramming/config/WebConfig.class
+academy/javaprogramming/WebMain.class
+academy/javaprogramming/util/thymeleaf/DecoupledLogicSetup.class
+academy/javaprogramming/util/GameMappings.class
+academy/javaprogramming/controller/GameController.class

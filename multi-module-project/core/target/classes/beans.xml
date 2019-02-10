@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--<context:annotation-config/>-->
+    <context:component-scan base-package="academy.javaprogramming"/>
+
+    <!--<bean id="numberGenerator" class="academy.javaprogramming.Impl.NumberGeneratorImpl" />
+    <bean id="game" class="academy.javaprogramming.Impl.GameImpl">
+        &lt;!&ndash;<constructor-arg ref="numberGenerator"/>&ndash;&gt;
+    </bean>-->
+
+    <!-- Works as a replacement for the above constructor injection implementation -->
+    <!--<bean id="game" class="academy.javaprogramming.Impl.GameImpl">
+        <property name="numberGenerator" ref="numberGenerator"/>
+    </bean>-->
+
+    <!-- Added to provide support for JSR annotation specification; replaced by annotation support with spring-context -->
+    <!--<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>-->
+</beans>

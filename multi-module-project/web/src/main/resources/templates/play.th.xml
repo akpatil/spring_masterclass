@@ -1,0 +1,10 @@
+<thlogic>
+    <attr sel="#head-id" th:replace="~{fragments/head :: headFragment}"/>
+    <attr sel="#game-title" th:text="#{game.title}"/>
+    <attr sel="#main-message" th:text="${__${T(academy.javaprogramming.util.AttributeNames).MAIN_MESSAGE}__}"/>
+    <attr sel="#result-message" th:text="${__${T(academy.javaprogramming.util.AttributeNames).RESULT_MESSAGE}__}"/>
+    <attr sel="#game-form" th:action="@{__${T(academy.javaprogramming.util.GameMappings).PLAY}__}"/>
+    <attr sel="#footer-id" th:replace="~{fragments/foot :: footFragment}"/>
+    <attr sel="#enter-guess" th:text="#{game.enter.guess}"/>
+    <attr sel="#submit" th:value="#{game.submit}"/>
+</thlogic>

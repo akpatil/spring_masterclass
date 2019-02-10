@@ -1,0 +1,10 @@
+/home/icy/source/java/spring-masterclass/multi-module-project/web/src/main/java/academy/javaprogramming/util/GameMappings.java
+/home/icy/source/java/spring-masterclass/multi-module-project/web/src/main/java/academy/javaprogramming/service/GameService.java
+/home/icy/source/java/spring-masterclass/multi-module-project/web/src/main/java/academy/javaprogramming/WebMain.java
+/home/icy/source/java/spring-masterclass/multi-module-project/web/src/main/java/academy/javaprogramming/interceptor/RequestInterceptor.java
+/home/icy/source/java/spring-masterclass/multi-module-project/web/src/main/java/academy/javaprogramming/util/ViewNames.java
+/home/icy/source/java/spring-masterclass/multi-module-project/web/src/main/java/academy/javaprogramming/util/thymeleaf/DecoupledLogicSetup.java
+/home/icy/source/java/spring-masterclass/multi-module-project/web/src/main/java/academy/javaprogramming/util/AttributeNames.java
+/home/icy/source/java/spring-masterclass/multi-module-project/web/src/main/java/academy/javaprogramming/controller/GameController.java
+/home/icy/source/java/spring-masterclass/multi-module-project/web/src/main/java/academy/javaprogramming/config/WebConfig.java
+/home/icy/source/java/spring-masterclass/multi-module-project/web/src/main/java/academy/javaprogramming/impl/GameServiceImpl.java

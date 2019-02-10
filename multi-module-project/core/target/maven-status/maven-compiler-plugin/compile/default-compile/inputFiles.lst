@@ -1,0 +1,11 @@
+/home/icy/source/java/spring-masterclass/multi-module-project/core/src/main/java/academy/javaprogramming/config/GameConfig.java
+/home/icy/source/java/spring-masterclass/multi-module-project/core/src/main/java/academy/javaprogramming/Impl/NumberGeneratorImpl.java
+/home/icy/source/java/spring-masterclass/multi-module-project/core/src/main/java/academy/javaprogramming/config/AppConfig.java
+/home/icy/source/java/spring-masterclass/multi-module-project/core/src/main/java/academy/javaprogramming/MessageGenerator.java
+/home/icy/source/java/spring-masterclass/multi-module-project/core/src/main/java/academy/javaprogramming/Impl/MessageGeneratorImpl.java
+/home/icy/source/java/spring-masterclass/multi-module-project/core/src/main/java/academy/javaprogramming/Annotations/GuessCount.java
+/home/icy/source/java/spring-masterclass/multi-module-project/core/src/main/java/academy/javaprogramming/NumberGenerator.java
+/home/icy/source/java/spring-masterclass/multi-module-project/core/src/main/java/academy/javaprogramming/Annotations/MaxNumber.java
+/home/icy/source/java/spring-masterclass/multi-module-project/core/src/main/java/academy/javaprogramming/Annotations/MinNumber.java
+/home/icy/source/java/spring-masterclass/multi-module-project/core/src/main/java/academy/javaprogramming/Impl/GameImpl.java
+/home/icy/source/java/spring-masterclass/multi-module-project/core/src/main/java/academy/javaprogramming/Game.java

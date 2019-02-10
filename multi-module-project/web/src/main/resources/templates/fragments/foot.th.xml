@@ -1,0 +1,4 @@
+<thlogic>
+    <attr sel="#footer-id"  th:fragment="footFragment"/>
+    <attr sel="#footer-content-id"  th:text="|#{footer.content} Ascension Learning |"/>
+</thlogic>

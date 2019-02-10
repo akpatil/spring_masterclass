@@ -1,0 +1,11 @@
+<thlogic>
+    <attr sel="#head-id" th:replace="~{fragments/head :: headFragment}"/>
+    <attr sel="#result-message" th:text="${__${T(academy.javaprogramming.util.AttributeNames).RESULT_MESSAGE}__}"/>
+    <attr sel="#play" th:href="@{__${T(academy.javaprogramming.util.GameMappings).PLAY_AGAIN}__}"/>
+    <attr sel="#home" th:href="@{__${T(academy.javaprogramming.util.GameMappings).HOME}__}"/>
+    <attr sel="#heading-one" th:text="#{game.over.heading.one}"/>
+    <attr sel="#heading-two" th:text="#{game.over.heading.two}"/>
+    <attr sel="#link-one" th:text="#{game.over.link.one}"/>
+    <attr sel="#link-two" th:text="#{game.over.link.two}"/>
+    <attr sel="#footer-id" th:replace="~{fragments/foot :: footFragment}"/>
+</thlogic>

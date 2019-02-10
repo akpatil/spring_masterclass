@@ -1,0 +1,38 @@
+buildscript {
+	ext {
+		springBootVersion = '2.1.2.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+allprojects {
+	group = 'academy.learnprogramming'
+	version = '1.0.0-SNAPSHOT'
+}
+
+subprojects {
+	apply plugin: 'java'
+	apply plugin: 'io.spring.dependency-management'
+
+	sourceCompatibility = '1.8'
+
+	repositories {
+		mavenCentral()
+	}
+
+	dependencies {
+		annotationProcessor("org.projectlombok:lombok")
+		compileOnly 'org.projectlombok:lombok'
+	}
+
+	dependencyManagement {
+		imports {
+			mavenBom("org.springframework.boot:spring-boot-dependencies:${springBootVersion}")
+		}
+	}
+}
