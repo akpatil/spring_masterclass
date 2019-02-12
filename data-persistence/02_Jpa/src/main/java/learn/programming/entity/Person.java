@@ -2,9 +2,11 @@ package learn.programming.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 import java.util.Date;
 
 @Entity
+@NamedQuery(name="findAllPersons", query="SELECT p FROM Person p")
 public class Person {
     @Id
     private int id;
