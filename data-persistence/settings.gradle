@@ -1,4 +1,5 @@
 rootProject.name = 'data-persistence'
 include '01_Jdbc'
 include '02_Jpa'
+include '03_jpa_hibernate'
 
