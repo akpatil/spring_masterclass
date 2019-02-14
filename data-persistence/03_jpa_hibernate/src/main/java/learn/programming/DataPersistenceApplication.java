@@ -1,5 +1,6 @@
 package learn.programming;
 
+import learn.programming.entity.Course;
 import learn.programming.repository.CourseRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,8 @@ public class DataPersistenceApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         log.info("findById method called {}", courseRepository.findById(1001L));
+        courseRepository.deleteById(1003L);
+        log.info("save method called {}", courseRepository.save(new Course("Microservices")));
     }
 
     public static void main(String[] args) {

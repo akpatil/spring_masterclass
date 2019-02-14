@@ -36,5 +36,6 @@ subprojects {
         compileOnly 'org.projectlombok:lombok'
 		/*testCompile group: 'org.spockframework', name: 'spock-core', version: '1.2-groovy-2.5'*/
 		testCompile group: 'org.spockframework', name: 'spock-spring', version: '1.2-groovy-2.5'
+		compile group: 'cglib', name: 'cglib-nodep', version: '3.2.10'
 	}
 }
