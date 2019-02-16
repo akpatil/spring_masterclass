@@ -1,5 +1,6 @@
 package learn.programming;
 
+import learn.programming.entity.Passport;
 import learn.programming.entity.Student;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -27,5 +28,12 @@ public class StudentRepositoryTest {
         Student student = manager.find(Student.class, 100L);
         log.info("Student {}", student);
         log.info("Passport {}", student.getPassport());
+    }
+
+    @Test
+    public void getStudentFromPassport() {
+        Passport passport = manager.find(Passport.class, 100L);
+        log.info("Passport details {}", passport);
+        log.info("Student details {}", passport.getStudent());
     }
 }
