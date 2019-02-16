@@ -3,8 +3,10 @@ package learn.programming.entity;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 
 @Entity
+@NamedQuery(name = "query_to_get_all_courses", query = "Select c From Course c")
 public class Course {
     @Id
     @GeneratedValue
