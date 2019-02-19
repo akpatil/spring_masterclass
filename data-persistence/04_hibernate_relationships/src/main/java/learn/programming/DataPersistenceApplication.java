@@ -20,6 +20,7 @@ public class DataPersistenceApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         log.info("Spring Application is running...");
-        studentRepository.saveStudentWithPassport();
+        //studentRepository.saveStudentWithPassport();
+        studentRepository.saveReviewsForCourse();
     }
 }

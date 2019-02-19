@@ -3,6 +3,7 @@ package learn.programming.entity;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Review {
@@ -11,6 +12,8 @@ public class Review {
     private Long id;
     private String rating;
     private String description;
+    @ManyToOne
+    private Course course;
 
     public Review() {}
 
@@ -39,12 +42,21 @@ public class Review {
         this.rating = rating;
     }
 
+    public Course getCourse() {
+        return course;
+    }
+
+    public void setCourse(Course course) {
+        this.course = course;
+    }
+
     @Override
     public String toString() {
-        return "\n Review{" +
+        return "Review{" +
                 "id=" + id +
                 ", rating='" + rating + '\'' +
                 ", description='" + description + '\'' +
+                ", course=" + course +
                 '}';
     }
 }
