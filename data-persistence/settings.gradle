@@ -3,4 +3,8 @@ include '01_Jdbc'
 include '02_Jpa'
 include '03_jpa_hibernate'
 include '04_hibernate_relationships'
+include '05_hibernate_inheritance'
+include '06_hibernate_inheritance_tableperclass'
+include '07_hibernate_inheritance_joined'
+include '08_hibernate_inheritance_mappedsuperclass'
 
