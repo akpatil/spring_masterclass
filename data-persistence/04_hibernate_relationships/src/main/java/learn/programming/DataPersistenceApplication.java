@@ -21,6 +21,10 @@ public class DataPersistenceApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
         log.info("Spring Application is running...");
         //studentRepository.saveStudentWithPassport();
-        studentRepository.saveReviewsForCourse();
+        //studentRepository.saveReviewsForCourse();
+        //studentRepository.jpqlGetCoursesWithoutStudents();
+        studentRepository.jpqlJoins();
+        studentRepository.jpqlLeftJoins();
+        studentRepository.jpqlCrossJoins();
     }
 }
