@@ -15,3 +15,4 @@ insert into review (id, rating, description, course_id) values (102, '5', 'Awest
 insert into review (id, rating, description, course_id) values (103, '1', 'I want my money back ! I got doped !!', 3);
 
 insert into student_course (student_id, course_id) values (100, 1);
+insert into student_course (student_id, course_id) values (103, 1);

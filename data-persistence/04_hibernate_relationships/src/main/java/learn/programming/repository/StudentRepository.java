@@ -12,6 +12,10 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
 import java.util.List;
 
 @Slf4j
@@ -75,5 +79,62 @@ public class StudentRepository {
         for(Object[] o: resultList) {
             log.info("\n Courses: {} \n Students: {}", o[0], o[1]);
         }
+    }
+
+    public void criteriaBasics() {
+        // Use CriteriaBuilder to create CriteriaQuery returning the expected result object
+        CriteriaBuilder builder = manager.getCriteriaBuilder();
+        CriteriaQuery query = builder.createQuery(Course.class);
+
+        // Define roots for tables involved in the query
+        Root<Course> courseRoot = query.from(Course.class);
+
+        // Build the TypedQuery using EntityManager and CriteriaQuery
+        TypedQuery<Course> tQuery = manager.createQuery(query.select(courseRoot));
+
+        List<Course> courses = tQuery.getResultList();
+        log.info("Courses {}", courses);
+    }
+
+    public void criteriaLike() {
+        // Use CriteriaBuilder to create CriteriaQuery returning the expected result object
+        CriteriaBuilder builder = manager.getCriteriaBuilder();
+        CriteriaQuery query = builder.createQuery(Course.class);
+
+        // Define roots for tables involved in the query
+        Root<Course> courseRoot = query.from(Course.class);
+
+        // Define predicates using CriteriaBuilder
+        Predicate likeWild = builder.like(courseRoot.get("name"), "%wild%");
+
+        query.where(likeWild);
+
+        // Build the TypedQuery using EntityManager and CriteriaQuery
+        TypedQuery<Course> tQuery = manager.createQuery(query.select(courseRoot));
+
+        List<Course> courses = tQuery.getResultList();
+        log.info("Courses {}", courses);
+    }
+
+    public void criteriaJoin() {
+        // Use CriteriaBuilder to create CriteriaQuery returning the expected result object
+        CriteriaBuilder builder = manager.getCriteriaBuilder();
+        CriteriaQuery query = builder.createQuery(Course.class);
+
+        // Define roots for tables involved in the query
+        Root<Course> courseRoot = query.from(Course.class);
+
+        // Define predicates using CriteriaBuilder
+        courseRoot.join("students");
+
+        // Build the TypedQuery using EntityManager and CriteriaQuery
+        TypedQuery<Course> tQuery = manager.createQuery(query.select(courseRoot));
+        TypedQuery<Student> tsQuery = manager.createQuery(query.select(courseRoot));
+
+        List<Course> courses = tQuery.getResultList();
+        List<Student> students = tsQuery.getResultList();
+
+        log.info("Courses Join {}", courses);
+        log.info("Students Join {}", students);
     }
 }
