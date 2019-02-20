@@ -12,4 +12,7 @@ public interface CourseRepository extends JpaRepository<Course, Long> {
 
     @Query(value = "SELECT * FROM COURSE c WHERE name LIKE '%wild%'", nativeQuery = true)
     List<Course> courseWithWildInItCustom();
+
+    @Query(name = "all_courses")
+    List<Course> allCoursesWithNamedQueries();
 }

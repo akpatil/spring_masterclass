@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@NamedQuery(name = "all_courses", query = "SELECT c FROM Course c")
 public class Course {
     @Id
     @GeneratedValue

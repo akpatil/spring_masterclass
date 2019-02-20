@@ -41,5 +41,6 @@ public class DataPersistenceApplication implements CommandLineRunner {
         log.info("All Courses: {}", courseRepository.findAll(sort));
         log.info("Wild Course {}", courseRepository.courseWithWildInIt());
         log.info("Wild Course {}", courseRepository.courseWithWildInItCustom());
+        log.info("Named Query called from Jpa Repository {}", courseRepository.allCoursesWithNamedQueries());
     }
 }
